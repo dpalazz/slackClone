@@ -1,5 +1,7 @@
 {
   "name": "slackClone",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

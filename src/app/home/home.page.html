@@ -4,10 +4,26 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      #Slack
+      #{{ currentRoom }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
 </ion-content>
+
+<ion-footer>
+    <ion-input placeholder='Message #{{ currentRoom }}'></ion-input>
+    <div class="footer-wrapper">
+      <div>
+        <ion-icon name="at"></ion-icon>
+        <ion-text>/</ion-text>
+        <ion-icon name="attach"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="images" slot="end"></ion-icon>
+        <ion-button size="small">Send</ion-button>
+      </div>
+    </div>
+  </ion-footer>

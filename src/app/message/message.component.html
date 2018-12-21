@@ -1,0 +1,10 @@
+<ion-item lines="none">
+  <ion-thumbnail>
+    <img src="../../assets/icon/favicon.png" alt="avatar">
+  </ion-thumbnail>
+  <ion-text>
+    <h3>{{ username || 'username' }}</h3>
+    <h6>{{ time | date: 'h:mm a' }}</h6>
+    <p>{{ message || 'message' }} </p>
+  </ion-text>
+</ion-item>

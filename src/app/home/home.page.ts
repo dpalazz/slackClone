@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
   public rooms = ['room1', 'room2', 'room3'];
+  public messages = [];
   public currentRoom: string;
   public messageContent: string;
   public displayMessage: boolean;
@@ -16,6 +17,11 @@ export class HomePage implements OnInit {
   }
 
   public collectMessageContent() {
+    const message = {
+      'user': '',
+      'message': this.messageContent,
+    };
     this.displayMessage = true;
+    this.messages.push(message);
   }
 }

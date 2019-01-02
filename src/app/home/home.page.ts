@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class HomePage implements OnInit {
   public rooms = ['room1', 'room2', 'room3'];
   public currentRoom: string;
+  public messageContent: string;
+  public displayMessage: boolean;
 
   ngOnInit() {
     this.currentRoom = this.rooms[0];
+  }
+
+  public collectMessageContent() {
+    this.displayMessage = true;
   }
 }

@@ -1,3 +1,5 @@
-<p>
-  message works!
-</p>
+<ion-list *ngFor="let message of messages">
+  <ion-item lines="none">
+    <ion-label>{{ message }}</ion-label>
+  </ion-item>
+</ion-list>

@@ -1,0 +1,7 @@
+<ion-list *ngFor="let message of currentRoom.messages">
+  <ion-item lines="none">
+    <ion-label>{{ message.user }} </ion-label>
+  </ion-item>
+  <ion-text>{{ message.message }}</ion-text>
+</ion-list>
+<!-- <app-message [messages]="messages" messageInput="messageInput"></app-message> -->

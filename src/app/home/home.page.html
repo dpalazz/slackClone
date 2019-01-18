@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      #{{ currentRoom }}
+      #{{ currentRoom.name }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,7 +16,7 @@
 <ion-footer>
     <ion-input 
       autofocus 
-      placeholder='Message #{{ currentRoom }}'
+      placeholder='Message #{{ currentRoom.name }}'
       [(ngModel)]="messageInput"
       (keyup.enter)="createMessage()"
     ></ion-input>

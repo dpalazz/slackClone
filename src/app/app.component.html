@@ -7,6 +7,11 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
+        <ion-list *ngFor="let room of rooms">
+          <ion-item>
+            <ion-label>{{ room.name }}</ion-label>
+          </ion-item>
+        </ion-list>
       </ion-content>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>

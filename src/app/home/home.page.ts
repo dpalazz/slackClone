@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { RoomService } from '../services/room.service';
 
 @Component({
   selector: 'app-home',
@@ -6,16 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  public rooms = ['room1', 'room2', 'room3'];
-  public messages = [];
-  public messageInput = '';
-  public currentRoom: string;
+  public currentRoom: object;
+
+
+  constructor(
+    private roomService: RoomService,
+  ) {}
 
   ngOnInit() {
-    this.currentRoom = this.rooms[0];
-  }
-
-  public createMessage() {
-    this.messages.push(this.messageInput);
+    this.roomService.currentRoom.subscribe(value => this.currentRoom = value);
   }
 }

@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { RoomComponent } from './room/room.component';
 import { MessageComponent } from './message/message.component';
 
 @NgModule({
@@ -19,6 +20,6 @@ import { MessageComponent } from './message/message.component';
       }
     ])
   ],
-  declarations: [HomePage, MessageComponent]
+  declarations: [HomePage, RoomComponent, MessageComponent]
 })
 export class HomePageModule {}

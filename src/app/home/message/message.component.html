@@ -1,5 +1,20 @@
-<ion-list *ngFor="let message of messages">
-  <ion-item lines="none">
-    <ion-label>{{ message }}</ion-label>
-  </ion-item>
-</ion-list>
+<ion-input 
+  autofocus 
+  placeholder='Message #{{ currentRoom.name }}'
+  [(ngModel)]="messageInput"
+  (keyup.enter)="createMessage()"
+  ></ion-input>
+<div class="footer-wrapper">
+    <div>
+      <ion-icon name="at"></ion-icon>
+      <ion-text>/</ion-text>
+      <ion-icon name="attach"></ion-icon>
+    </div>
+    <div>
+      <ion-icon name="images" slot="end"></ion-icon>
+      <ion-button 
+        size="small"
+        (click)="createMessage()"
+      >Send</ion-button>
+    </div>
+</div>

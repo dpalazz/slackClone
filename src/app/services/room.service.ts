@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 import { rooms } from '../room';
 import { Room } from '../models/room';
@@ -8,17 +9,16 @@ import { Room } from '../models/room';
 })
 export class RoomService {
   public rooms = rooms;
-  public currentRoom: Room = this.rooms[0];
+  public currentRoom = new BehaviorSubject(this.rooms[0]);
 
-  constructor() { }
+  constructor() {}
 
   getRooms() {
-    return rooms;
+    return this.rooms;
   }
 
-  updateRoom(room: Room) {
-    this.currentRoom = room;
-    console.log(this.currentRoom);
+  updateRoom(room) {
+    this.currentRoom.next(room);
   }
 
   addMessage(currentRoom: Room, message: any) {

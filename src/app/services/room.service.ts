@@ -8,11 +8,17 @@ import { Room } from '../models/room';
 })
 export class RoomService {
   public rooms = rooms;
+  public currentRoom: Room = this.rooms[0];
 
   constructor() { }
 
   getRooms() {
     return rooms;
+  }
+
+  updateRoom(room: Room) {
+    this.currentRoom = room;
+    console.log(this.currentRoom);
   }
 
   addMessage(currentRoom: Room, message: any) {

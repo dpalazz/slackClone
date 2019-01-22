@@ -4,6 +4,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { RoomService } from './services/room.service';
+import { Room } from './models/room';
 
 @Component({
   selector: 'app-root',
@@ -30,5 +31,9 @@ export class AppComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  updateCurrentRoom(room: Room) {
+    this.roomService.updateRoom(room);
   }
 }

@@ -9,11 +9,11 @@ import { RoomService } from '../services/room.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  public currentRoom: Room = {id: 1, name: 'bookclub', messages: [{'message': 'hey'}]};
+  public currentRoom: Room = this.roomService.currentRoom;
 
   constructor(
     private roomService: RoomService,
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

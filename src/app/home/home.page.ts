@@ -8,7 +8,7 @@ import { RoomService } from '../services/room.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  public currentRoom;
+  public currentRoom: object;
 
 
   constructor(

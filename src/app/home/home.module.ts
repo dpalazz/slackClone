@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { RoomComponent } from './room/room.component';
 import { MessageComponent } from './message/message.component';
-import { RoomService } from '../services/room.service';
 
 @NgModule({
   imports: [

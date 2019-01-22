@@ -9,7 +9,7 @@ import { Room } from '../models/room';
 })
 export class RoomService {
   public rooms = rooms;
-  public currentRoom = new BehaviorSubject(this.rooms[0]);
+  public currentRoom: BehaviorSubject<object> = new BehaviorSubject(this.rooms[0]);
 
   constructor() {}
 
@@ -17,7 +17,7 @@ export class RoomService {
     return this.rooms;
   }
 
-  updateRoom(room) {
+  updateRoom(room: Room) {
     this.currentRoom.next(room);
   }
 

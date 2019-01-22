@@ -15,8 +15,5 @@ export class HomePage implements OnInit {
     private roomService: RoomService,
   ) {}
 
-  ngOnInit() {
-    this.roomService.getRooms()
-        .map(room => room.name === this.currentRoom.name ? this.currentRoom = room : this.currentRoom );
-  }
+  ngOnInit() {}
 }

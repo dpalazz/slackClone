@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { RoomComponent } from './room/room.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,6 @@ import { RoomComponent } from './room/room.component';
       }
     ])
   ],
-  declarations: [HomePage, RoomComponent]
+  declarations: [HomePage, RoomComponent, MessageComponent]
 })
 export class HomePageModule {}

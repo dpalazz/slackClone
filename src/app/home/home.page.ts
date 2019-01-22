@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Room } from '../models/room';
-import { RoomService } from '../room.service';
+import { RoomService } from '../services/room.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',

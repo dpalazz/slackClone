@@ -3,7 +3,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { RoomService } from '../app/room.service';
+import { RoomService } from './services/room.service';
 
 @Component({
   selector: 'app-root',

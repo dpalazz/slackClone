@@ -1,0 +1,56 @@
+.current-room-details {
+  color: var(--ion-color-dark-tint);
+  display: flex;
+  flex-direction: row;
+  font-size: 0.6rem;
+  justify-content: space-between;
+  padding: 10px 0px 5px 10px;
+}
+
+.current-room-name {
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.details {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  max-width: 50%;
+  
+  &.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    ion-icon {
+      padding-right: 3px;
+    }
+  }
+
+  &.right {
+    align-items: center;
+    justify-content: flex-end;
+
+    ion-searchbar {
+      padding-bottom: 0px;
+    }
+
+    ion-icon {
+      padding: 0px 3px;
+    }
+  }
+
+  > div {
+    padding-bottom: 5px;
+  }
+}
+
+.header {
+  border-bottom: 0.5px solid var(--ion-color-light-shade);
+}
+
+.pipe {
+  padding: 0px 8px;
+}

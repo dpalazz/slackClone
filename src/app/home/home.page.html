@@ -1,11 +1,34 @@
-<ion-header>
+<ion-header no-border class="header">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      #{{ currentRoom.name }}
-    </ion-title>
+    <div class="current-room-details">
+      <div class="details left">
+        <div>
+          <ion-title class="current-room-name">
+            #{{ currentRoom.name }}
+          </ion-title>
+        </div>
+        <div>
+          <ion-icon name="star-outline" size="small"></ion-icon>
+          <ion-text class="pipe">|</ion-text>
+          <ion-icon name="person" size="small"></ion-icon>
+          <ion-text class="pipe">27 |</ion-text>
+          <ion-icon name="pin" size="small"></ion-icon>
+          <ion-text class="pipe">40 |</ion-text>
+          <ion-text>Daily standup - 4PM Eastern - Now in a Slack Call!</ion-text>
+        </div>
+      </div>
+      <div class="details right">
+        <ion-icon name="call" size="large"></ion-icon>
+        <ion-icon name="information-circle-outline" size="large"></ion-icon>
+        <ion-icon name="cog" size="large"></ion-icon>
+        <ion-searchbar></ion-searchbar>
+        <ion-icon name="at" size="large"></ion-icon>
+        <ion-icon name="star-outline" size="large"></ion-icon>
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
